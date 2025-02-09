@@ -36,7 +36,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
-          name: java-app
+          name: spaceship-spring-api
           path: target
 
       - name: Deploy to Server via SSH
@@ -49,4 +49,4 @@ jobs:
             cd /home/${{ secrets.SERVER_USER }}/java-app
             rm -f app.jar
             mv ~/target/*.jar app.jar
-            sudo systemctl restart my-java-app  # Adjust based on your setup
+            # sudo systemctl restart my-java-app
