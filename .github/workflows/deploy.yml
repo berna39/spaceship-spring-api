@@ -46,7 +46,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /home/${{ secrets.SERVER_USER }}/java-app
+            cd ~/spaceship-spring-api
             rm -f app.jar
             mv ~/target/*.jar app.jar
-            # sudo systemctl restart my-java-app
+            java -jar app.jar
