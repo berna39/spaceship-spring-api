@@ -39,6 +39,9 @@ jobs:
           name: spaceship-spring-api
           path: target
 
+      - name: Display downloaded build file(s)
+        run: ls -R
+
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
